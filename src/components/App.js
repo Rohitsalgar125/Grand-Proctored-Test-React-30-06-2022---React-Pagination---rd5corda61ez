@@ -1,11 +1,13 @@
-import React from 'react'
+import React, {useState} from 'react'
 import '../styles/App.css';
 import { PostList } from './PostList';
 const App = () => {
 
+  const [pageNo, setPageNo] = useState(1);
+
   return (
     <div id="main">
-      <PostList />
+      <PostList pageNo={pageNo} setPageNo={setPageNo}/>
     </div>
   )
 }
